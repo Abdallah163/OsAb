@@ -1,0 +1,229 @@
+<!-- كود الـ CSS المخصص -->
+<style>
+:root{
+  --primary:#061B3A;--secondary:#0A2D5C;--blue:#087FF5;--bright:#19A7FF;
+  --light:#F3F8FD;--white:#fff;--text:#10233F;--muted:#607089;--border:#DCE8F5;
+  --shadow:0 12px 35px rgba(6,27,58,.08);--radius:18px;
+}
+.wp-custom-page *{box-sizing:border-box;margin:0;padding:0}
+.wp-custom-page{font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;background:#fff;color:var(--text);line-height:1.8;direction:rtl;text-align:right}
+.wp-custom-page a{text-decoration:none;color:inherit}
+.wp-custom-page .container{width:min(1120px,92%);margin:auto}
+.wp-custom-page .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 23px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.25s;cursor:pointer}
+.wp-custom-page .btn-primary{background:var(--blue);color:white;box-shadow:0 8px 20px rgba(8,127,245,.22)}
+.wp-custom-page .btn-primary:hover{transform:translateY(-2px);background:#066fd8}
+.wp-custom-page .btn-outline{border-color:var(--border);background:#fff;color:var(--primary)}
+.wp-custom-page .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.wp-custom-page .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:80px 0;overflow:hidden;border-radius:var(--radius)}
+.wp-custom-page .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.wp-custom-page .badge{display:inline-block;background:rgba(25,167,255,.16);border:1px solid rgba(255,255,255,.18);color:#cfeaff;padding:7px 13px;border-radius:30px;font-size:13px;font-weight:800;margin-bottom:18px}
+.wp-custom-page h1{font-size:clamp(28px,4vw,48px);line-height:1.2;margin-bottom:20px;color:#fff}
+.wp-custom-page .hero p{color:#d9e7f5;font-size:16px;max-width:650px;margin-bottom:28px}
+.wp-custom-page .actions{display:flex;gap:12px;flex-wrap:wrap}
+.wp-custom-page .hero .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.wp-custom-page .visual{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:22px}
+.wp-custom-page .dashboard{background:#fff;border-radius:18px;padding:18px;color:var(--text)}
+.wp-custom-page .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.wp-custom-page .dash-title{font-weight:900}.wp-custom-page .dot{width:10px;height:10px;border-radius:50%;background:var(--bright)}
+.wp-custom-page .chart{height:145px;border:1px solid var(--border);border-radius:13px;padding:14px;display:flex;align-items:end;gap:10px;background:var(--light)}
+.wp-custom-page .bar{flex:1;background:linear-gradient(180deg,var(--bright),var(--blue));border-radius:7px 7px 2px 2px}
+.wp-custom-page .techs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+.wp-custom-page .tech{padding:9px;text-align:center;background:var(--light);border-radius:10px;font-size:12px;font-weight:800}
+.wp-custom-page section{padding:60px 0}
+.wp-custom-page .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+.wp-custom-page .section-head h2{font-size:32px;line-height:1.3;margin-bottom:10px}
+.wp-custom-page .section-head p{color:var(--muted)}
+.wp-custom-page .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wp-custom-page .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:.25s}
+.wp-custom-page .card:hover{transform:translateY(-5px)}
+.wp-custom-page .icon{width:52px;height:52px;display:grid;place-items:center;border-radius:14px;background:#e7f3ff;color:var(--blue);font-size:25px;margin-bottom:18px}
+.wp-custom-page .card h3{font-size:20px;margin-bottom:9px}
+.wp-custom-page .card p{color:var(--muted);font-size:14px;margin-bottom:14px}
+.wp-custom-page .list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px;color:#40536d;font-size:13px;margin-bottom:20px;padding:0}
+.wp-custom-page .list li:before{content:"✓";color:var(--blue);font-weight:900;margin-left:6px}
+.wp-custom-page .light{background:var(--light);border-radius:var(--radius)}
+.wp-custom-page .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wp-custom-page .feature{text-align:center;padding:25px;border:1px solid var(--border);border-radius:16px;background:#fff}
+.wp-custom-page .feature .icon{margin:0 auto 13px;width:45px;height:45px}
+.wp-custom-page .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.wp-custom-page .project{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.wp-custom-page .project-img{height:150px;background:linear-gradient(135deg,#dff1ff,#eef6fd);display:grid;place-items:center;color:var(--blue);font-size:40px}
+.wp-custom-page .project-body{padding:20px}
+.wp-custom-page .flow{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:10px}
+.wp-custom-page .flow-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 10px;text-align:center;font-weight:900;box-shadow:var(--shadow)}
+.wp-custom-page .arrow{text-align:center;color:var(--blue);font-size:22px}
+.wp-custom-page .cta{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;text-align:center;padding:60px 20px;border-radius:var(--radius)}
+.wp-custom-page .cta h2{font-size:32px;margin-bottom:10px;color:#fff}
+.wp-custom-page .cta p{color:#d9e7f5;margin-bottom:25px}
+.wp-custom-page .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.wp-custom-page .service-card{padding:25px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+.wp-custom-page .skills{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.wp-custom-page .skill-box{border:1px solid var(--border);border-radius:18px;padding:25px;background:#fff}
+.wp-custom-page .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
+.wp-custom-page .pill{padding:7px 13px;border-radius:30px;background:var(--light);color:var(--secondary);font-size:13px;font-weight:800}
+.wp-custom-page .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+.wp-custom-page .contact-card{padding:20px;border:1px solid var(--border);border-radius:16px;background:#fff;margin-bottom:13px}
+.wp-custom-page form{background:#fff;border:1px solid var(--border);border-radius:18px;padding:25px;box-shadow:var(--shadow)}
+.wp-custom-page .field{margin-bottom:15px}
+.wp-custom-page .field label{display:block;font-weight:700;font-size:14px;margin-bottom:5px}
+.wp-custom-page input,.wp-custom-page select,.wp-custom-page textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font:inherit;outline:none}
+.wp-custom-page textarea{min-height:120px;resize:vertical}
+
+@media(max-width:850px){
+ .wp-custom-page .hero-grid,.wp-custom-page .contact-grid,.wp-custom-page .skills,.wp-custom-page .cards,.wp-custom-page .projects,.wp-custom-page .service-grid{grid-template-columns:1fr}
+ .wp-custom-page .features{grid-template-columns:1fr 1fr}
+ .wp-custom-page .flow{grid-template-columns:1fr}
+ .wp-custom-page .arrow{transform:rotate(90deg)}
+}
+</style>
+
+<!-- محتوى الصفحة -->
+<div class="wp-custom-page">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Data Analyst & MERN Stack Developer</span>
+        <h1>أحوّل بياناتك إلى قرارات واضحة، وأحوّل فكرتك إلى تطبيق ويب متكامل.</h1>
+        <p>أقدم حلول تحليل البيانات ولوحات المعلومات التفاعلية، بالإضافة إلى تطوير تطبيقات ويب حديثة ومتكاملة.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">اطلب خدمة</a>
+          <a class="btn btn-outline" href="#services">استكشف خدماتي</a>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="dashboard">
+          <div class="dash-head"><span class="dash-title">Business Dashboard</span><span class="dot"></span></div>
+          <div class="chart">
+            <span class="bar" style="height:42%"></span>
+            <span class="bar" style="height:65%"></span>
+            <span class="bar" style="height:52%"></span>
+            <span class="bar" style="height:82%"></span>
+            <span class="bar" style="height:70%"></span>
+            <span class="bar" style="height:94%"></span>
+          </div>
+          <div class="techs">
+            <span class="tech">Excel</span><span class="tech">Power BI</span><span class="tech">React</span>
+            <span class="tech">Node.js</span><span class="tech">MongoDB</span><span class="tech">API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>خدماتي</h2>
+        <p>حلول عملية تجمع بين تحليل البيانات وتطوير تطبيقات الويب.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>تحليل البيانات</h3>
+          <p>تحويل البيانات الخام إلى معلومات واضحة تساعدك على اتخاذ قرارات أفضل.</p>
+          <ul class="list"><li>Excel</li><li>Power BI</li><li>Google Sheets</li><li>Data Cleaning</li><li>KPIs</li><li>Dashboards</li></ul>
+          <a class="btn btn-outline" href="#contact">اعرف المزيد</a>
+        </article>
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3>تطوير MERN Stack</h3>
+          <p>تطوير تطبيقات ويب حديثة وسريعة وقابلة للتوسع.</p>
+          <ul class="list"><li>React.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>REST API</li><li>Authentication</li></ul>
+          <a class="btn btn-outline" href="#contact">اعرف المزيد</a>
+        </article>
+        <article class="card">
+          <div class="icon">📈</div>
+          <h3>حلول البيانات للشركات</h3>
+          <p>بناء Dashboards وتقارير وحلول تساعد الإدارة على متابعة الأداء.</p>
+          <ul class="list"><li>KPIs</li><li>Reports</li><li>Dashboards</li><li>Sales Analysis</li><li>Performance</li><li>Automation</li></ul>
+          <a class="btn btn-outline" href="#contact">تواصل معي</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="container">
+      <div class="section-head"><h2>لماذا تختارني؟</h2></div>
+      <div class="features">
+        <div class="feature"><div class="icon">📊</div><h3>خبرة في البيانات</h3><p>تحويل البيانات الخام إلى معلومات واضحة.</p></div>
+        <div class="feature"><div class="icon">💡</div><h3>حلول عملية</h3><p>تركيز على المشكلة والنتيجة وليس مجرد الأرقام.</p></div>
+        <div class="feature"><div class="icon">⚙️</div><h3>تطوير متكامل</h3><p>من الواجهة الأمامية إلى Backend وقاعدة البيانات.</p></div>
+        <div class="feature"><div class="icon">🎯</div><h3>حسب احتياجك</h3><p>حلول مصممة وفق احتياجات المشروع الفعلية.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><h2>نماذج من الحلول</h2></div>
+      <div class="projects">
+        <div class="project"><div class="project-img">📊</div><div class="project-body"><h3>Sales Dashboard</h3><p>لوحة معلومات لتحليل المبيعات والأرباح والعملاء.</p></div></div>
+        <div class="project"><div class="project-img">🏥</div><div class="project-body"><h3>Medical / RCM Dashboard</h3><p>حلول لتحليل الأداء والإيرادات والمطالبات.</p></div></div>
+        <div class="project"><div class="project-img">🗂️</div><div class="project-body"><h3>Web Management System</h3><p>نظام ويب لإدارة البيانات والعمليات.</p></div></div>
+        <div class="project"><div class="project-img">💻</div><div class="project-body"><h3>Custom MERN Application</h3><p>تطبيق ويب متكامل مصمم حسب احتياجات المشروع.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="container">
+      <div class="section-head">
+        <h2>من البيانات إلى تطبيق متكامل</h2>
+        <p>أجمع بين تحليل البيانات وتطوير الويب لبناء حلول عملية تبدأ من البيانات وتنتهي بلوحة معلومات أو تطبيق متكامل.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-item">Excel / Sheets</div>
+        <div class="arrow">←</div>
+        <div class="flow-item">Database</div>
+        <div class="arrow">←</div>
+        <div class="flow-item">API → React → Dashboard</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>هل لديك مشروع؟</h2>
+    <p>سواء كنت تحتاج إلى تحليل بيانات أو تطوير تطبيق ويب، يمكنني مساعدتك في بناء الحل المناسب.</p>
+    <a class="btn btn-primary" href="#contact">ابدأ مشروعك الآن</a>
+  </section>
+
+  <section id="contact" style="padding-top:60px;">
+    <div class="container">
+      <div class="section-head">
+        <h2>تواصل معي</h2>
+        <p>أرسل تفاصيل مشروعك وسأساعدك في تحديد الحل المناسب.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card"><strong>WhatsApp</strong><span>تواصل معي عبر WhatsApp</span></div>
+          <div class="contact-card"><strong>Email</strong><span>أرسل لي بريدًا إلكترونيًا</span></div>
+          <div class="contact-card"><strong>GitHub</strong><span>شاهد مشاريعي البرمجية</span></div>
+          <div class="contact-card"><strong>LinkedIn</strong><span>تواصل معي على LinkedIn</span></div>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('شكرًا لك. سيتم التواصل معك قريباً.');">
+          <div class="field"><label>الاسم</label><input type="text" required></div>
+          <div class="field"><label>البريد الإلكتروني</label><input type="email" required></div>
+          <div class="field">
+            <label>نوع الخدمة</label>
+            <select>
+              <option>تحليل بيانات</option>
+              <option>Excel</option>
+              <option>Power BI</option>
+              <option>Google Sheets</option>
+              <option>SPSS</option>
+              <option>MERN Stack</option>
+              <option>Web Application</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="field"><label>رقم WhatsApp</label><input type="tel"></div>
+          <div class="field"><label>تفاصيل المشروع</label><textarea></textarea></div>
+          <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
